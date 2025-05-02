@@ -17,6 +17,13 @@ spec:
         image: jubbuseacrinmh.azurecr.io/aks-demo-app:__BUILD_ID__
         ports:
         - containerPort: 3000
+        volumeMounts:
+        - mountPath: /mnt/azuredisk
+          name: azuredisk
+      volumes:
+      - name: azuredisk
+        persistentVolumeClaim:
+          claimName: pvc-azuredisk
 ---
 apiVersion: v1
 kind: Service
