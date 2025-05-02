@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
+  name: pv1-azuredisk
   annotations:
     pv.kubernetes.io/provisioned-by: disk.csi.azure.com
-  name: pvnew-azuredisk
 spec:
   capacity:
     storage: 10Gi

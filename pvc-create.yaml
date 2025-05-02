@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pvcnew-azuredisk
+  name: pvc1-azuredisk
 spec:
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 5Gi
-  volumeName: pvnew-azuredisk
+  volumeName: pv1-azuredisk
   storageClassName: managed-csi
