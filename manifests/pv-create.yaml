@@ -13,6 +13,6 @@ spec:
   storageClassName: managed-csi
   csi:
     driver: disk.csi.azure.com
-    volumeHandle: /subscriptions/<subscriptionID>/resourceGroups/MC_myAKSCluster_myAKSCluster_eastus/providers/Microsoft.Compute/disks/myAKSDisk
+    volumeHandle: /subscriptions/60a4e683-430f-450e-aff4-3affdb8ddd50/resourceGroups/rg-aks-free-tier/providers/Microsoft.Compute/disks/myAKSDisk
     volumeAttributes:
       fsType: ext4
