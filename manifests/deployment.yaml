@@ -23,7 +23,7 @@ spec:
       volumes:
       - name: azuredisk
         persistentVolumeClaim:
-          claimName: pvc1-azuredisk
+          claimName: pvctemp-azuredisk
 ---
 apiVersion: v1
 kind: Service
