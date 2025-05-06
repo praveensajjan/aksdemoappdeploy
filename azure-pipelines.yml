@@ -14,7 +14,7 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'mContainerps'
+        containerRegistry: 'DockerACR'
         repository: $(imageName)
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
