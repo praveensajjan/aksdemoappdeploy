@@ -14,7 +14,7 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'azureacraccess'
+        containerRegistry: 'mContainerps'
         repository: $(imageName)
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
@@ -34,9 +34,9 @@ stages:
     - task: Kubernetes@1
       inputs:
         connectionType: 'Azure Resource Manager'
-        azureSubscriptionEndpoint: 'azure-spn-devops'
-        azureResourceGroup: 'rg-aks-free-tier'
-        kubernetesCluster: 'aks-free-cluster'
+        azureSubscriptionEndpoint: 'AKSconnections'
+        azureResourceGroup: 'my_aks'
+        kubernetesCluster: 'firstAKS'
         namespace: default
         command: apply
         useConfigurationFile: true
